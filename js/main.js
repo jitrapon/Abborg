@@ -1,6 +1,7 @@
 /**
  * AngularJS Tutorial 1
  * @author Nick Kaye <nick.c.kaye@gmail.com>
+ * @author Jitrapon Tiachunpun <yoshi3003@gmail.com>
  */
 
 /**
@@ -29,3 +30,20 @@ app.config(['$routeProvider', function ($routeProvider) {
     // else 404
     .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
 }]);
+
+/**
+ * Controls all other Pages
+ */
+app.controller('PageCtrl', function (/* $scope, $location, $http */) {
+  console.log("Page Controller reporting for duty.");
+
+  // Activates the Carousel
+  $('.carousel').carousel({
+    interval: 5000
+  });
+
+  // Activates Tooltips for Social Links
+  $('.tooltip-social').tooltip({
+    selector: "a[data-toggle=tooltip]"
+  })
+});

@@ -59,6 +59,18 @@ img {
     width: 73%;
 }
 
+img {
+  vertical-align: middle;
+}
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  height: auto;
+}
+
 .carousel {
     height: 400px;
     width: 80%;

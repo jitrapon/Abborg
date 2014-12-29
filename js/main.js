@@ -39,6 +39,13 @@ app.config(['$routeProvider', function ($routeProvider) {
     .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
 }]);
 
+/**
+* Logo Controller
+*/
+app.controller('LogoCtrl', function ($scope) {
+    $scope.path = "assets/img/logo.png";
+});
+
 
 /**
  * Controls Carousel
@@ -60,6 +67,19 @@ app.controller('CarouselCtrl', function ($scope) {
             image:'http://www.planeers.com/images/flash-banner.jpg'
         }
     ];
+});
+
+/**
+* Background
+*/
+app.controller('BackgroundCtrl', function ($scope) {
+
+    $scope.backgroundImg = {
+        background: 'url(assets/img/background.jpg)'
+    };
+
+    console.log($scope.backgroundImg);
+
 });
 
 
